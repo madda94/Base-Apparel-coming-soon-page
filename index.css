@@ -1,0 +1,174 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('images/bg-pattern-desktop.svg');
+    font-family: 'Josefin Sans', sans-serif;
+    color: hsl(0, 36%, 70%);
+    background-color: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+#logo {
+    display: flex;
+    justify-content: flex-start;
+    padding: 2em;
+}
+
+#main-img-mobile {
+    width: 100%;
+}
+
+#main-img-desktop {
+    display: none;
+}
+
+#content {
+    margin: 4em 1.5em;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: rgb(43, 39, 39);
+    letter-spacing: 9px;
+    margin-bottom: 0;
+}
+
+span {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+    text-align: center;
+}
+
+#content-p {
+    margin: 1em;
+    line-height: 1.5;
+}
+
+form {
+    position: relative;
+}
+
+input {
+    font-family: inherit;
+    margin: 1em auto;
+    color: inherit;
+    width: 70%;
+    padding: 1.4em 2em;
+    border: 1px solid;
+    border-radius: 25px;
+}
+
+input::placeholder {
+    color: inherit;
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+button {
+    position: absolute;
+    top: 13px;
+    right: 8px;
+    padding: .95em 2.3em;
+    border-radius: 25px;
+    border: none;
+    background-color: hsl(0, 89%, 75%);
+    cursor: pointer;
+}
+
+button img {
+    width: 120%;
+}
+
+button:hover {
+    background-color: hsl(0, 76%, 82%);
+}
+
+#error-message {
+    display: none;
+    margin: 0;
+    margin-left: 4em;
+    text-align: start;
+    color: hsl(0, 93%, 68%);
+    font-size: .7rem;
+    font-weight: 600;
+}
+
+#error-icon {
+    display: none;
+    position: absolute;
+    top: 25px;
+    right: 90px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 650px) {
+    body {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 15% 70% 15%;
+    }
+
+    #logo {
+        width: 25%;
+        margin: 2em 0 0 8em;
+    }
+
+    #main-img-mobile {
+        display: none;
+    }
+
+    #main-img-desktop {
+        display: block;
+        width: 100%;
+        grid-row: span 2;
+        margin: 0;
+    }
+
+    #content {
+        margin: auto 10em;
+        text-align: start;
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-right: 6em;
+        letter-spacing: 12px;
+    }
+
+    #content-p {
+        font-size: 1.2rem;
+    }
+
+    input {
+        margin: 1em;
+        margin-bottom: .3em;
+        font-size: 1rem;
+        padding: 1.2em 2em;
+        width: 65%;
+    }
+
+    button {
+        top: 15px;
+        right: 100px;
+        padding: 1.20em 3.2em;
+    }
+
+    #error-icon {
+        top: 35px;
+        right: 210px;
+    }
+}
